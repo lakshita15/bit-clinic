@@ -7,8 +7,8 @@ import Register from "./Components/Register/Register"
 import Header from "./Components/Header/Header"
 import Home from "./Pages/Home"
 import Footer from "./Components/Footer/Footer"
-import PatientDashboard from "./Components/Dashboard//Patient/Patient"
 import Profile from "./Components/Profile/Profile"
+import Dashboard from "./Components/Dashboard/Dashboard"
 function App() {
 	const [user, updateUser] = useState(null)
 
@@ -60,9 +60,11 @@ function App() {
 						render={props => (
 							<Register {...props} user={user} />
 						)}></Route>
-					
-          
-		  <Route path='/PatientDashboard' exact component={PatientDashboard}></Route>
+
+					<Route
+						path='/dashboard'
+						exact
+						component={Dashboard}></Route>
 					<Route path='/profile' exact component={Profile} />
 				</Switch>
 			</Router>

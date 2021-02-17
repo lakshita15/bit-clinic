@@ -19,7 +19,7 @@ class Patient extends Component {
 			.firestore()
 			.collection("users")
 			.doc(uid)
-			.update({ ...this.state })
+			.update({ ...this.state, isProfileComplete: true })
 			.then(() => console.log("profile updated"))
 			.catch(e => console.log(e))
 	}
@@ -84,8 +84,9 @@ class Patient extends Component {
 						Submit
 					</Button>
 					<Link
-						className='btn btn-success ml-3'
-						disabled={!this.state.isProfileComplete}
+						className={`btn btn-success ml-3 ${
+							!this.state.isProfileComplete && "disabled"
+						}`}
 						to='/dashboard'>
 						Dashboard
 					</Link>
