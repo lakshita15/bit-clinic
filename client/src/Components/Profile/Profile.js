@@ -29,7 +29,7 @@ export default function Profile(props) {
 		return function cleanup() {
 			if (firebaseAuth) firebaseAuth()
 		}
-	}, [profile, updateProfile])
+	}, [updateProfile])
 
 	return (
 		<div className='profile'>

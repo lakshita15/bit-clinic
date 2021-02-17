@@ -19,7 +19,7 @@ class Patient extends Component {
 			.firestore()
 			.collection("users")
 			.doc(uid)
-			.update({ ...this.state })
+			.update({ ...this.state, isProfileComplete: true })
 			.then(() => console.log("profile updated"))
 			.catch(e => console.log(e))
 	}
