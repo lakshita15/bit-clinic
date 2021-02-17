@@ -1,4 +1,25 @@
-#Register{
-    margin: 15vw auto;
-    width: 50vw;
+.Register{
+    background-image: url(../../Images/i.jpg);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    padding-left: 5%;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 3vw;
+    align-self: center;
+    background-position: right;
+    #Register{
+        width: 50vw;
+        background: #9dccdf;
+        height: max-content;
+        align-self: center;
+        opacity: 0.8;
+        padding: 2vw;
+        .dropdown{
+            position: relative;
+    margin-bottom: 3vw;
+        }
+    }
 }

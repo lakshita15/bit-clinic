@@ -5,6 +5,8 @@ class Register extends Component {
     state = {  }
     render() { 
         return ( 
+          <div className= "Register">
+
             <Form id = "Register">
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
@@ -38,6 +40,7 @@ class Register extends Component {
               Submit
             </Button>
           </Form>
+          </div>
          );
     }
 }

@@ -17,13 +17,13 @@ class Login extends Component {
 	}
 
 	onValuesUpdate = e => {
-		const inputId = e.target.id
-		if (inputId == "email") {
+		const inputType = e.target.type
+		if (inputType == "email") {
 			this.setState({
 				email: e.target.value.trim(),
 				isEmailInvalid: false,
 			})
-		} else if (inputId == "password") {
+		} else if (inputType == "password") {
 			this.setState({
 				password: e.target.value.trim(),
 				isPasswordWrong: false,
@@ -57,46 +57,48 @@ class Login extends Component {
 
 	render() {
 		return (
-			<Form id='Login' onSubmit={this.onSubmit}>
-				<Form.Group controlId='formBasicEmail'>
-					<Form.Label>Email address</Form.Label>
-					<Form.Control
-						type='email'
-						id='email'
-						placeholder='you@email.com'
-						value={this.state.email}
-						isInvalid={this.state.isEmailInvalid}
-						required={true}
-						onChange={this.onValuesUpdate}
-					/>
-					<Form.Control.Feedback type='invalid'>
-						Email does not exists
-					</Form.Control.Feedback>
-					<Form.Text className='text-muted'>
-						We'll never share your email with anyone else.
-					</Form.Text>
-				</Form.Group>
+			<div className='Login'>
+				<Form id='Login' onSubmit={this.onSubmit}>
+					<Form.Group controlId='formBasicEmail'>
+						<Form.Label>Email address</Form.Label>
+						<Form.Control
+							type='email'
+							id='email'
+							placeholder='you@email.com'
+							value={this.state.email}
+							isInvalid={this.state.isEmailInvalid}
+							required={true}
+							onChange={this.onValuesUpdate}
+						/>
+						<Form.Control.Feedback type='invalid'>
+							Email does not exists
+						</Form.Control.Feedback>
+						<Form.Text className='text-muted'>
+							We'll never share your email with anyone else.
+						</Form.Text>
+					</Form.Group>
 
-				<Form.Group controlId='formBasicPassword'>
-					<Form.Label>Password</Form.Label>
-					<Form.Control
-						type='password'
-						id='password'
-						placeholder='your super secret password'
-						required={true}
-						value={this.state.password}
-						isInvalid={this.state.isPasswordWrong}
-						onChange={this.onValuesUpdate}
-					/>
-					<Form.Control.Feedback type='invalid'>
-						Your password does not match
-					</Form.Control.Feedback>
-				</Form.Group>
+					<Form.Group controlId='formBasicPassword'>
+						<Form.Label>Password</Form.Label>
+						<Form.Control
+							type='password'
+							id='password'
+							placeholder='your super secret password'
+							required={true}
+							value={this.state.password}
+							isInvalid={this.state.isPasswordWrong}
+							onChange={this.onValuesUpdate}
+						/>
+						<Form.Control.Feedback type='invalid'>
+							Your password does not match
+						</Form.Control.Feedback>
+					</Form.Group>
 
-				<Button variant='primary' type='submit'>
-					Submit
-				</Button>
-			</Form>
+					<Button variant='primary' type='submit'>
+						Submit
+					</Button>
+				</Form>
+			</div>
 		)
 	}
 }
