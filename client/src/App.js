@@ -1,25 +1,65 @@
-import React from "react";
-import "./App.css";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
-import Login from "./Components/Login/Login.js";
-import Register from "./Components/Register/Register";
-import Patient from "./Components/Profile/Patient/Patient";
+import React, { useEffect, useState } from "react"
+import "./App.css"
+import firebase from "./firebase"
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom"
+import Login from "./Components/Login/Login.js"
+import Register from "./Components/Register/Register"
+import Patient from "./Components/Profile/Patient/Patient"
+
 function App() {
-  return (
-    <React.Fragment>
-    
-      
-      <div className="safe-space" />
-      <Router>
-        <Switch>
-         
-          <Route path="/Login" exact component={Login}></Route>
-          <Route path="/Register" exact component={Register}></Route>
-          <Route path="/Patient" exact component={Patient}></Route>
-        </Switch>
-      </Router>
-    </React.Fragment>
-  );
+	const [user, updateUser] = useState(null)
+
+	useEffect(() => {
+		const firebaseAuthUnsubscribe = firebase.auth().onAuthStateChanged(
+			firebaseUser => {
+				if (firebaseUser) {
+					const uid = firebaseUser.uid
+					firebase
+						.firestore()
+						.collection("users")
+						.doc(uid)
+						.get()
+						.then(doc => updateUser(doc.exists ? doc.data() : null))
+						.catch(e => {
+							console.log(e)
+							updateUser(null)
+						})
+				} else {
+					updateUser(null)
+				}
+			},
+			error => {
+				console.log(error.code)
+			}
+		)
+		// cleanup function
+		return function cleanup() {
+			if (firebaseAuthUnsubscribe) firebaseAuthUnsubscribe()
+		}
+	}, [])
+
+	return (
+		<React.Fragment>
+			<div className='safe-space' />
+			<Router>
+				<Switch>
+					<Route
+						path='/Register'
+						exact
+						render={props => (
+							<Login {...props} user={user} />
+						)}></Route>
+					<Route
+						path='/Register'
+						exact
+						render={props => (
+							<Register {...props} user={user} />
+						)}></Route>
+					<Route path='/Patient' exact component={Patient}></Route>
+				</Switch>
+			</Router>
+		</React.Fragment>
+	)
 }
 
-export default App;
+export default App

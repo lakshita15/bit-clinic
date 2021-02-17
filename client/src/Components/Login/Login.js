@@ -58,6 +58,7 @@ class Login extends Component {
 	render() {
 		return (
 			<div className='Login'>
+				{this.props.user && this.props.history.push("/")}
 				<Form id='Login' onSubmit={this.onSubmit}>
 					<Form.Group controlId='formBasicEmail'>
 						<Form.Label>Email address</Form.Label>
