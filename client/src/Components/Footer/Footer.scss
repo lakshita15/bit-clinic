@@ -4,7 +4,34 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
-    height: 20vh;
+  
     align-items: center;
-   
+    .Container{
+        display: flex;
+        text-align: center;
+       
+        img{
+            
+            margin: 2vw;
+        }
+        .description{
+            padding: 9vw;
+            .Heading{
+                font-size: 5vw;
+                color: black;
+                font-weight: 500;
+            }
+            .Content{
+                font-size: 2vw;
+                font-weight: 700;
+                opacity: 1;
+                line-height: 1.38;
+                img{
+                    margin: 0vw;
+                    width: 5vw;
+                    margin-right: 0vw;
+                }
+            }
+        }
+    }
 }

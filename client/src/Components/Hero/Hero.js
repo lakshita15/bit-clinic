@@ -48,9 +48,7 @@ Have a Daily Walk
 </div>
 <img  src = {image2} alt = ""></img>
 </div>
-<div className= "">
-    
-</div>
+
 
     </section>
       </React.Fragment>
