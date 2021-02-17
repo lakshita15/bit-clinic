@@ -11,11 +11,11 @@ function App() {
   return (
     <React.Fragment>
     <Header/>
-      <Home/>
+      
       <div className="safe-space" />
       <Router>
         <Switch>
-         
+        <Route path="/" exact component={Home}></Route>
           <Route path="/Login" exact component={Login}></Route>
           <Route path="/Register" exact component={Register}></Route>
           <Route path="/Patient" exact component={Patient}></Route>
