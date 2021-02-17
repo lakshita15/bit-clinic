@@ -1,24 +1,69 @@
-.SideBar{
-    width: 15vw;
-    background: skyblue;
-    height: 51vh;
-    padding: 2vw;
-    .PatientImage{
-img{
-    width: 11vw;
-    padding: 0vw;
-    border-radius: 50%;
-    border: 7px solid black
-}
-    }
-    .PatientName{
-font-weight: 500;
-color: black;
-    }
+.Container{
+display: flex;
 
-}
-.Sidebar-links{
-li{
-    list-style: none;
-}
+    .SideBar{
+        width: 15vw;
+        background: skyblue;
+        height: 51vh;
+        padding: 2vw;
+        .PatientImage{
+    img{
+        width: 11vw;
+        padding: 0vw;
+        border-radius: 50%;
+        border: 7px solid black
+    }
+        }
+        .PatientName{
+    font-weight: 500;
+    color: black;
+        }
+    
+    }
+    .Sidebar-links{
+    li{
+        list-style: none;
+    }
+    }
+    .doctorcontainer{
+        display: flex;
+    overflow-x: scroll;
+        .doctorr{
+            min-width: 334px;
+            border: 1px solid black;
+            border-radius: 1vw;
+            /* margin-left: 14vw; */
+            margin: 30px;
+            .DoctorDetails{
+                .DoctorImage{
+    img{
+        width: 11vw;
+            padding: 0vw;
+            border-radius: 50%;
+            border: 7px solid black
+    }
+                }
+                .DoctorName{
+                    font-weight: 500;
+                    color: black;
+                }
+                .DoctorAge{
+
+                }
+                .specialization{
+
+                }
+                .gender{
+
+                }
+                .appointment{
+                    color: black;
+    background: cornflowerblue;
+    border-radius: 2vw;
+    height: 4vw;
+    margin: 1vw;
+                }
+            }
+        }
+    }
 }
