@@ -1,4 +1,30 @@
-#Patient{
-    margin: 15vw auto;
-    width: 50vw;
+.Patient{
+    background-image: url(../../../Images/patient.gif);
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    padding-left: 26%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 8px solid cadetblue;
+    align-self: center;
+    background-position: center;
+    #Patient{
+      
+        width: 50vw;
+        background: #9dccdf;
+        height: max-content;
+        align-self: center;
+        opacity: 0.9;
+        padding: 2vw;
+.form-label{
+
+    display: inline-block;
+margin-bottom: 0.5rem;
+color: blue;
+font-weight: 500;
+}
+    }
 }

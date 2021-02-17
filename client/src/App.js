@@ -4,7 +4,6 @@ import firebase from "./firebase"
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom"
 import Login from "./Components/Login/Login.js"
 import Register from "./Components/Register/Register"
-import Patient from "./Components/Profile/Patient/Patient"
 import Header from "./Components/Header/Header"
 import Home from "./Pages/Home"
 import Footer from "./Components/Footer/Footer"
@@ -60,7 +59,6 @@ function App() {
 						render={props => (
 							<Register {...props} user={user} />
 						)}></Route>
-					<Route path='/Patient' exact component={Patient}></Route>
 					<Route path='/profile' exact component={Profile} />
 				</Switch>
 			</Router>
