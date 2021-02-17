@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-
+import "./Login.scss"
 import {Form , Button } from "react-bootstrap";
 class Login extends Component {
   state = {};
   render() {
     return (
-      <Form>
+      <Form id = "Login">
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" placeholder="Enter email" />
@@ -18,9 +18,7 @@ class Login extends Component {
           <Form.Label>Password</Form.Label>
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
-        <Form.Group controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
+        
         <Button variant="primary" type="submit">
           Submit
         </Button>
