@@ -8,7 +8,7 @@ import
 function App() {
   return (
     <React.Fragment>
-      <Login />
+    
       
       <div className="safe-space" />
       <Router>
