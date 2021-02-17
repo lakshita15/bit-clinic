@@ -1,0 +1,83 @@
+#Hero{
+   
+    background: lightblue;
+    opacity: 0.8;
+    #Text{
+        background-image: url(../../Images/health.png);
+        height: 100vh;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    /* display: flex; */
+    align-items: center;
+    justify-content: flex-start;
+    padding: 18vw 74vw;
+    margin-left: 0vw;
+        h3{
+            color: black;
+            display: flex;
+            padding: 0vw 1vw;
+            font-size: 4vw;
+            margin: 0vw;
+        }
+        h1{
+            color: blue;
+            font-size: 5.5vw;
+            padding: 0vw;
+            margin-top: 0vw;
+            display: flex;
+        }
+    }
+}  
+.quote{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 2.3vw auto;
+    max-width: 90%;
+  
+    
+    .quote_content{
+      font-size: 2.5vw;
+      font-weight: 300;
+      margin-top: 0;
+    }
+  
+    .quote_name{
+        font-weight: 600;
+        font-size: 1.7vw;
+        transform: translateX(50%);
+        text-transform: capitalize;
+        color: black;
+      span{
+        letter-spacing: -.196vw;
+        font-weight: 200;
+      }
+    }
+  }
+  
+.Container{
+    display: flex;
+    text-align: center;
+   
+    img{
+width: 32vw;
+    }
+    .description{
+        padding: 9vw;
+        .Heading{
+            font-size: 5vw;
+            color: black;
+            font-weight: 500;
+        }
+        .Content{
+            font-size: 2vw;
+            font-weight: 700;
+            opacity: 1;
+            line-height: 1.38;
+        }
+    }
+}
