@@ -1,0 +1,30 @@
+.Doctor{
+    background-image: url(../../../Images/Doctor.jpg);
+    height: 100vh;
+    width: 100%;
+    background-color: skyblue;
+    display: flex;
+    padding-left: 5%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-bottom: 8px solid cadetblue;
+    align-self: center;
+    background-position: right;
+    #Doctor{
+      
+        width: 50vw;
+        background: #9dccdf;
+        height: max-content;
+        align-self: center;
+        opacity: 0.8;
+        padding: 2vw;
+.form-label{
+
+    display: inline-block;
+margin-bottom: 0.5rem;
+color: blue;
+font-weight: 500;
+}
+    }
+}

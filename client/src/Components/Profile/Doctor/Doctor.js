@@ -5,7 +5,9 @@ class Doctor extends Component {
     state = {  }
     render() { 
         return ( 
-<Form id = "Patient">
+            <div className= "Doctor">
+
+<Form id = "Doctor">
             <Form.Group controlId="formBasicEmail">
               <Form.Label>Name</Form.Label>
               <Form.Control type="Name" placeholder="Enter Name" />
@@ -32,6 +34,7 @@ class Doctor extends Component {
               Submit
             </Button>
           </Form>
+            </div>
          );
     }
 }
