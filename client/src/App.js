@@ -48,7 +48,7 @@ function App() {
 				<Switch>
 					<Route path='/' exact component={Home}></Route>
 					<Route
-						path='/Register'
+						path='/Login'
 						exact
 						render={props => (
 							<Login {...props} user={user} />
