@@ -4,12 +4,11 @@ import firebase from "./firebase"
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom"
 import Login from "./Components/Login/Login.js"
 import Register from "./Components/Register/Register"
-import Patient from "./Components/Profile/Patient/Patient"
-import Doctor from "./Components/Profile/Doctor/Doctor"
 import Header from "./Components/Header/Header"
 import Home from "./Pages/Home"
 import Footer from "./Components/Footer/Footer"
 import PatientDashboard from "./Components/Dashboard//Patient/Patient"
+import Profile from "./Components/Profile/Profile"
 function App() {
 	const [user, updateUser] = useState(null)
 
@@ -61,9 +60,10 @@ function App() {
 						render={props => (
 							<Register {...props} user={user} />
 						)}></Route>
-					<Route path='/Patient' exact component={Patient}></Route>
-          <Route path='/Doctor' exact component={Doctor}></Route>
+					
+          
 		  <Route path='/PatientDashboard' exact component={PatientDashboard}></Route>
+					<Route path='/profile' exact component={Profile} />
 				</Switch>
 			</Router>
 			<Footer />
