@@ -84,8 +84,9 @@ class Patient extends Component {
 						Submit
 					</Button>
 					<Link
-						className='btn btn-success ml-3'
-						disabled={!this.state.isProfileComplete}
+						className={`btn btn-success ml-3 ${
+							!this.state.isProfileComplete && "disabled"
+						}`}
 						to='/dashboard'>
 						Dashboard
 					</Link>
