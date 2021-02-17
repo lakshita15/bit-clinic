@@ -1,4 +1,31 @@
-#Login{
-    margin: 15vw auto;
-    width: 50vw;
+
+.Login{
+    background-image: url(../../Images/image.jpg);
+    height: 100vh;
+    width: 100%;
+    background-color: #BCE4FA;
+    display: flex;
+    padding-left: 5%;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* padding: 3vw; */
+    align-self: center;
+    background-position: center;
+    #Login{
+      
+        width: 50vw;
+        background: #9dccdf;
+        height: max-content;
+        align-self: center;
+        opacity: 0.8;
+        padding: 2vw;
+.form-label{
+
+    display: inline-block;
+margin-bottom: 0.5rem;
+color: blue;
+font-weight: 500;
+}
+    }
 }

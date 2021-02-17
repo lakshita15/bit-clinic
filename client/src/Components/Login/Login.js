@@ -5,6 +5,9 @@ class Login extends Component {
   state = {};
   render() {
     return (
+      <div className="Login">
+
+      
       <Form id = "Login">
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -23,6 +26,7 @@ class Login extends Component {
           Submit
         </Button>
       </Form>
+      </div>
     );
   }
 }
