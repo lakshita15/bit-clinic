@@ -31,3 +31,53 @@
         }
     }
 }  
+.quote{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 2.3vw auto;
+    max-width: 90%;
+  
+    
+    .quote_content{
+      font-size: 2.5vw;
+      font-weight: 300;
+      margin-top: 0;
+    }
+  
+    .quote_name{
+        font-weight: 600;
+        font-size: 1.7vw;
+        transform: translateX(50%);
+        text-transform: capitalize;
+        color: black;
+      span{
+        letter-spacing: -.196vw;
+        font-weight: 200;
+      }
+    }
+  }
+  
+.Container{
+    display: flex;
+    text-align: center;
+   
+    img{
+width: 32vw;
+    }
+    .description{
+        padding: 9vw;
+        .Heading{
+            font-size: 5vw;
+            color: black;
+            font-weight: 500;
+        }
+        .Content{
+            font-size: 2vw;
+            font-weight: 700;
+            opacity: 1;
+            line-height: 1.38;
+        }
+    }
+}

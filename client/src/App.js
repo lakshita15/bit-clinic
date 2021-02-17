@@ -6,6 +6,7 @@ import Register from "./Components/Register/Register";
 import Patient from "./Components/Profile/Patient/Patient";
 import Header from "./Components/Header/Header"
 import Home from "./Pages/Home"
+import Footer from "./Components/Footer/Footer"
 function App() {
   return (
     <React.Fragment>
@@ -20,6 +21,7 @@ function App() {
           <Route path="/Patient" exact component={Patient}></Route>
         </Switch>
       </Router>
+      <Footer/>
     </React.Fragment>
   );
 }
