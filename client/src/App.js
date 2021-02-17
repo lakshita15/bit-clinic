@@ -8,6 +8,7 @@ import Patient from "./Components/Profile/Patient/Patient"
 import Header from "./Components/Header/Header"
 import Home from "./Pages/Home"
 import Footer from "./Components/Footer/Footer"
+import Profile from "./Components/Profile/Profile"
 function App() {
 	const [user, updateUser] = useState(null)
 
@@ -60,6 +61,7 @@ function App() {
 							<Register {...props} user={user} />
 						)}></Route>
 					<Route path='/Patient' exact component={Patient}></Route>
+					<Route path='/profile' exact component={Profile} />
 				</Switch>
 			</Router>
 			<Footer />

@@ -71,9 +71,10 @@ class Register extends Component {
 					.doc(userCred.user.uid)
 					.set({
 						userType: this.state.userType,
+						isProfileComplete: false,
 					})
 			})
-			.then(() => console.log("user added to collection"))
+			.then(() => this.props.history.push("/profile"))
 			.catch(e => {
 				const errCode = e.code
 				switch (errCode) {
